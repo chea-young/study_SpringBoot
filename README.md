@@ -1,5 +1,10 @@
 # study_springboot
 
+### 목차
+[1. 프로젝트 생성 방법](#Spring-boot-프로젝트-생성하는-법)
+
+[2. 라이브러리 살펴보기](#라이브러리)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -21,4 +26,19 @@
 - build.gradle
     - thymeleaf : html을 만드는 템플릿 엔진
 
-
+## 라이브러리
+- spring-boot-starter-web
+- spring boot 라이브러리
+    - spring-boot-starter-tomcat: 톰캣 (웹서버)
+    - spring-webmvc: 스프링 웹 MVC
+    - spring-boot-starter-thymeleaf: 타임리프 템플릿 엔진(View)
+    - spring-boot-starter(공통): 스프링 부트 + 스프링 코어 + 로깅
+        - spring-boot
+            - spring-core
+        - spring-boot-starter-logging
+            - logback, slf4j
+- test 라이브러리
+    - junit: 테스트 프레임워크
+- mockito: 목 라이브러리
+- assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
+- spring-test: 스프링 통합 테스트 지원
