@@ -7,6 +7,8 @@
 
 [3. View 환경설정](#View)
 
+[4. 빌드하고 실행하기] (#Build)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -72,3 +74,11 @@
     }
 ```
 - hello.html의 thymeleaf를 선언한 {data} 부분에 'hello!!'로 치환
+
+## Build
+- CIL에 spring boot 프로젝트가 있는 폴더에 들어가 `./gradlew build`를 하면 설치가 되고
+- build -> lib 폴더에 들어가 `java -jar hello-spring-0.0.1-SNAPSHOT.jar`를 하면 spring이 실행됨.
+
+#### 기타
+- spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이
+View 파일 변경이 가능
