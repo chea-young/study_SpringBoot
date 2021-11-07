@@ -48,7 +48,12 @@
 ## View
 - `resources/static/index.html`에 넣는 파일이 Welcome Page가 됨
 - Wep application에서 맨 처음의 진입점이 Controller
-
+<img src='./img/03_01.PNG'/>
+- /hello라고 던지면 내장 톰켓 웹 서버를 통해 'helloController'에 @GetMapping("hello")에 매핑이 되서 해당 method가 실행. 
+- method 안의 model이 넘어와서 만들어지게 되고 return 된 이름의 templates으로 'viewResolver'라 화면을 찾아 랜더링.
+    - viewResolver
+        - 스프링 부트 템플릿엔진 기본 viewName 매핑
+        - resources:templates/ +{ViewName}+ .html
 
 ### Template Engines
 - freemarker
