@@ -5,6 +5,8 @@
 
 [2. 라이브러리 살펴보기](#라이브러리)
 
+[3. View 환경설정](#View)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -42,3 +44,26 @@
 - mockito: 목 라이브러리
 - assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
 - spring-test: 스프링 통합 테스트 지원
+
+## View
+- `resources/static/index.html`에 넣는 파일이 Welcome Page가 됨
+- Wep application에서 맨 처음의 진입점이 Controller
+
+
+### Template Engines
+- freemarker
+- groovy
+- thymeleaf
+- mustache
+
+## Controller
+- `@GetMapping()`: web application에서 해당 keyword로 들어오면 해당 method를 호출
+
+## Model
+```
+    public String hello(Model model) {
+        model.addAttribute("data", "hello!!");
+        return "hello";
+    }
+```
+- hello.html의 thymeleaf를 선언한 {data} 부분에 'hello!!'로 치환
