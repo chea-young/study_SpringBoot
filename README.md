@@ -11,6 +11,8 @@
 
 [5. 정적 컨텐츠](#정적-컨텐츠)
 
+[6. MVC와 템플릿 엔진](#MVC와-템플릿-엔진)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -89,6 +91,14 @@
 <img src='./img/04_01.PNG'/>
 - static에 html 파일을 생성해 준 후, '/파일이름.html'으로 들어가주면 해당 파일을 가능(그대로 반환 )
 
+## MVC와 템플릿 엔진
+- MVC: model, view, controller
+    - view: 화면을 그리는 데에만 집중
+    - controller: 비즈니스 로직, 서버 뒷단에 관련된 일
+    - model: 필요한 것들을 담아두는 것
+- `@RequestParam("name") String name`: URL 파라미터를 name으로 가져오는 것
+    - ex: http://localhost:8080/hello-mvc?name=spring
+- `<p th:text="'hello ' + ${name}">hello! empty</p>`: 값이 아무것도 안들어 올 때는 'hello! empty'가 서버로 값이 타고 들어오면 'hello {name}'이 보임
 
 #### 기타
 - spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이
