@@ -7,7 +7,9 @@
 
 [3. View 환경설정](#View)
 
-[4. 빌드하고 실행하기] (#Build)
+[4. 빌드하고 실행하기](#Build)
+
+[5. 정적 컨텐츠](#정적-컨텐츠)
 
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
@@ -78,6 +80,14 @@
 ## Build
 - CIL에 spring boot 프로젝트가 있는 폴더에 들어가 `./gradlew build`를 하면 설치가 되고
 - build -> lib 폴더에 들어가 `java -jar hello-spring-0.0.1-SNAPSHOT.jar`를 하면 spring이 실행됨.
+
+## 정적 컨텐츠
+- 정적 컨텐츠 vs MVC와 템플릿 엔진 vs API
+    - 정적 컨텐츠: 파일을 그대로 웹 브라우저에 전달해주는 것
+    - MVC와 템플릿 엔진: 서버에서 변형을 해 html을 바꿔서 내려주는 방식
+    - API: json을 이용해서 client한테 데이터를 전달해주는 방식
+- static에 html 파일을 생성해 준 후, '/파일이름.html'으로 들어가주면 해당 파일을 가능(그대로 반환 )
+
 
 #### 기타
 - spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이
