@@ -105,6 +105,11 @@
 ## API
 - `@ResponseBody`: HTTP body에 return하는 것을 직접 넣어주는 겠다는 의미로 선언하는 것
 - 객체로 넘겨주면 json 방식
+<img src='./img/06_01.PNG'/>
+- hello-api가 왔다고 던지면 Controller에서 찾는데 @ResponseBody라는 것이 붙어있으면 return으로 반환한 것에 'HttpMessageConverter'가 동작을 해서 객체면 'JsonConverter'가 그냥 문자면 'StringConverter'를 이용해서 전달해줌.
+    - 기본 문자처리: StringHttpMessageConverter
+    - 기본 객체처리: MappingJackson2HttpMessageConverter
+    - byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
 
 #### 기타
 - spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이
