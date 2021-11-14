@@ -13,6 +13,8 @@
 
 [6. MVC와 템플릿 엔진](#MVC와-템플릿-엔진)
 
+[7. API](#API)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -99,6 +101,10 @@
 - `@RequestParam("name") String name`: URL 파라미터를 name으로 가져오는 것
     - ex: http://localhost:8080/hello-mvc?name=spring
 - `<p th:text="'hello ' + ${name}">hello! empty</p>`: 값이 아무것도 안들어 올 때는 'hello! empty'가 서버로 값이 타고 들어오면 'hello {name}'이 보임
+
+## API
+- `@ResponseBody`: HTTP body에 return하는 것을 직접 넣어주는 겠다는 의미로 선언하는 것
+- 객체로 넘겨주면 json 방식
 
 #### 기타
 - spring-boot-devtools 라이브러리를 추가하면, html 파일을 컴파일만 해주면 서버 재시작 없이
