@@ -12,6 +12,23 @@ JDBC URL: jdbc:h2:tcp://localhost/~/test # 접속
 
 ### 순수 JDBC
 - 애플리케이션 서버와 DB를 연결해주는 것
+- build.gradle 파일에 jdbc, h2 데이터베이스 관련 라이브러리 추가
+```
+implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+runtimeOnly 'com.h2database:h2'
+```
+
+- 스프링 부트 데이터베이스 연결 설정 추가
+```
+spring.datasource.url=jdbc:h2:tcp://localhost/~/test
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+```
+
+<img src='./img/01.PNG>
+
+- OCP(개방 폐쇄 원칙) - 확장에는 열려있고, 변경에는 닫혀있음.
+- 기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경 가능
 
 ### 스프링 Jdbc Templeate
 - JDBC만으로는 너무 어렵기 때문에 중복을 제거한 기능
