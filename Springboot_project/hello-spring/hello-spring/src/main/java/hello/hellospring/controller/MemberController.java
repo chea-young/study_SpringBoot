@@ -26,7 +26,7 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
-    @PostMapping(value = "/members/new") //method가 post로 추가하느 것이기 때문에
+    @PostMapping(value = "/members/new") //method가 post로 추가하는 것이기 때문에
     public String create(MemberForm form) {
         // Member 생성
         Member member = new Member();
