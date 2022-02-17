@@ -40,9 +40,22 @@ spring.datasource.username=sa
 - JDBC만으로는 너무 어렵기 때문에 JDBC API에서의 중복 코드를 제거하지만 sql은 작성해야 함.
 - sql로 편리하게 날리는 것이 가능
 
-
 ### JPA
 - sql을 직접 짜는 것이 아니라 JPA라는 기술로 등록, 수정, 삭제라는 기능을 날려줘서 사용할 수 있도록 함.
 - 객체를 쿼리없이 바로 저장하는 것이 가능.
+- 객체와 ORM의 기술
+- EntityManager: 스프링 부트가 자동으로 DB와 연결해서 이것을 생성하기 때문에 Injection해서 사용하며 됨.
+- JPA를 사용하기 위해서는 항상 트랜젝션이 존재해야 함.
+--> 객체 중심의 설계로 패러다임을 변경 가능
+--> 개발 생산성을 향상시키는 것이 가능
+
+```
+spring.jpa.show-sql=true # jpa가 날리는 sql을 보는 것이 가능
+spring.jpa.hibernate.ddl-auto=none # table을 저절로 만드는 데 그 기능을 크고 시작하는 것.
+
+@GeneratedValue(strategy = GenerationType.IDENTITY) : 객체 생성을 할 때 DB의 ID 처럼 저절로 생성되는 값
+```
+
+
 
 ### 스프링 데이터 JPA
