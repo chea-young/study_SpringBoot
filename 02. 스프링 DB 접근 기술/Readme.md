@@ -30,6 +30,10 @@ spring.datasource.username=sa
 - OCP(개방 폐쇄 원칙) - 확장에는 열려있고, 변경에는 닫혀있음.
 - 기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경 가능
 
+### 스프링 데이터 통합 테스트
+- `@SpringBootTest, @Transactional`를 클래스에 선언하고 `@Autowired`로 연결
+- ` @Transactional`: 테스트를 하기 전에 트랜젝션을 하고 테스트를 끝나면 rollback을 함.
+
 ### 스프링 Jdbc Templeate
 - JDBC만으로는 너무 어렵기 때문에 중복을 제거한 기능
 - sql로 편리하게 날리는 것이 가능
