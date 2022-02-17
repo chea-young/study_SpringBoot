@@ -33,10 +33,13 @@ spring.datasource.username=sa
 ### 스프링 데이터 통합 테스트
 - `@SpringBootTest, @Transactional`를 클래스에 선언하고 `@Autowired`로 연결
 - ` @Transactional`: 테스트를 하기 전에 트랜젝션을 하고 테스트를 끝나면 rollback을 함.
+- 단일 테스트로 하는게 더 좋을 확률이 높음. 어쩔 수 없는 경우에만 통합테스트를 진행해야 함.
+- 
 
 ### 스프링 Jdbc Templeate
-- JDBC만으로는 너무 어렵기 때문에 중복을 제거한 기능
+- JDBC만으로는 너무 어렵기 때문에 JDBC API에서의 중복 코드를 제거하지만 sql은 작성해야 함.
 - sql로 편리하게 날리는 것이 가능
+
 
 ### JPA
 - sql을 직접 짜는 것이 아니라 JPA라는 기술로 등록, 수정, 삭제라는 기능을 날려줘서 사용할 수 있도록 함.
