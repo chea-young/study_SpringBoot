@@ -56,6 +56,10 @@ spring.jpa.hibernate.ddl-auto=none # table을 저절로 만드는 데 그 기능
 @GeneratedValue(strategy = GenerationType.IDENTITY) : 객체 생성을 할 때 DB의 ID 처럼 저절로 생성되는 값
 ```
 
-
-
 ### 스프링 데이터 JPA
+- 리포지토리에 구현 클래스 없이 인터페이스 만으로 개발 가능
+- CRUD 기능 또안 스프링 데이터와 JPA가 제공
+- 인터페이스를 구현하면 스프링 데이터 JPA가 구현체를 자동으로 만들어주기 때문에 Spring에 자동으로 등록
+
+<img src='./img/02.PNG'/>
+- 기본적인 기능이 다 있기 때문에 가져가다가 쓰면 됨.
