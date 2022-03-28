@@ -1,4 +1,4 @@
-# study_springboot
+# study_SpringBoot
 
 ### 목차
 [1. 프로젝트 생성 방법](#Spring-boot-프로젝트-생성하는-법)
