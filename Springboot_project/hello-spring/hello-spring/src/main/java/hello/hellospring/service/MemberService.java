@@ -35,7 +35,7 @@ public class MemberService {
         } finally {
             long finish = System.currentTimeMillis();
             long timeMs = finish - start;
-            System.out.println("join " + timeMs + "ms"); // 걸리는 시간 조회
+            System.out.println("join " + timeMs + "ms");
         }
     }
 
