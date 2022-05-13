@@ -1,2 +1,21 @@
-package springboot.practice01.lchy.repository;public class MemberRepository {
+package springboot.practice01.lchy.repository;
+
+import org.springframework.stereotype.Repository;
+import springboot.practice01.lchy.domain.Member;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Repository
+public class MemberRepository {
+    @PersistenceContext
+    EntityManager em;
+    public Long save(Member member) {
+        em.persist(member);
+        return member.getId();
+    }
+
+    public Member find(Long id) {
+        return em.find(Member.class, id);
+    }
 }
