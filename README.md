@@ -51,17 +51,19 @@
             - spring-core
         - spring-boot-starter-logging
             - logback, slf4j
+                - slf4j: 로그를 찍는 인터페이스의 모음
 - test 라이브러리
     - junit: 테스트 프레임워크
-- mockito: 목 라이브러리
-- assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
-- spring-test: 스프링 통합 테스트 지원
+    - mockito: 목 라이브러리
+    - assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
+    - spring-test: 스프링 통합 테스트 지원
+
 
 ## View
 - `resources/static/index.html`에 넣는 파일이 Welcome Page가 됨
 - Wep application에서 맨 처음의 진입점이 Controller
 <img src='./img/03_01.PNG'/>
-- /hello라고 던지면 내장 톰켓 웹 서버를 통해 'helloController'에 @GetMapping("hello")에 매핑이 되서 해당 method가 실행. 
+- /hello라고 던지면 내장 톰켓 웹 서버를 통해 'helloController'에 @GetMapping("hello")에 매핑이 되서 해당 method가 실행.
 - method 안의 model이 넘어와서 만들어지게 되고 return 된 이름의 templates으로 'viewResolver'라 화면을 찾아 랜더링.
     - viewResolver
         - 스프링 부트 템플릿엔진 기본 viewName 매핑
