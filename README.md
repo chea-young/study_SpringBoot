@@ -19,6 +19,10 @@
 
 [7. API](#API)
 
+[8. 개인 추가 실습]
+
+[8-1. Import 결제 시스템 개발](#Import-결제-시스템-개발)
+
 ## Spring boot 프로젝트 생성하는 법
 1. 스프링 부트 스타터 사이트[https://start.spring.io]로 이동해서 스프링 프로젝트 생성
 2.  다음과 같이 설정한 후 'Generate'버튼 클릭
@@ -133,6 +137,17 @@
 - DI에는 필드 주입, setter 주입, 생성자 주입 3가지 방법이 존재
     - 단점: 필드 주입은 중간에 값을 변경하기 어려움
     - 단점: setter 주입을 사용하려면 public으로 열려있어야 함. (그래서 아무 개발자나 접근가능하게 됨)
+
+</br>
+
+## 개인 추가 실습
+
+### Import 결제 시스템 개발 
+- ./Practice04_ImportPayment_project
+- SPEC
+  - gradle
+  - springboot version: 3.1.0
+  - java: 11
 
 
 #### 기타
